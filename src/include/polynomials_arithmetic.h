@@ -105,6 +105,32 @@ EXPORT void torusPolynomialAddMulRKaratsuba(TorusPolynomial* result, const IntPo
  */
 EXPORT void torusPolynomialSubMulRKaratsuba(TorusPolynomial* result, const IntPolynomial* poly1, const TorusPolynomial* poly2);
 
+/**
+ * This function multiplies 2 polynomials (an integer poly and a torus poly)
+ * by using Toom-Cook 3
+ */
+EXPORT void torusPolynomialMultToomCook3(TorusPolynomial* result, const IntPolynomial* poly1, const TorusPolynomial* poly2);
+
+/**
+ * This function multiplies 2 polynomials (an integer poly and a torus poly)
+ * by using Toom-Cook 4
+ */
+EXPORT void torusPolynomialMultToomCook4(TorusPolynomial* result, const IntPolynomial* poly1, const TorusPolynomial* poly2);
+
+/**
+ * This function multiplies 2 polynomials (an integer poly and a torus poly)
+ * by using Toom-Cook 5
+ */
+EXPORT void torusPolynomialMultToomCook5(TorusPolynomial* result, const IntPolynomial* poly1, const TorusPolynomial* poly2);
+
+/**
+ * result = sum_{j<tau} poly1[j] * poly2[j] (mod X^N+1), by using Toom-Cook 3 (resp. 4).
+ * If lazy is true, the interpolation is done only once, on the sum of the products in the
+ * evaluation space (instead of once per product). Both modes give the same result.
+ */
+EXPORT void torusPolynomialMultSumToomCook3(TorusPolynomial* result, const IntPolynomial* const* poly1, const TorusPolynomial* const* poly2, const int32_t tau, const bool lazy);
+EXPORT void torusPolynomialMultSumToomCook4(TorusPolynomial* result, const IntPolynomial* const* poly1, const TorusPolynomial* const* poly2, const int32_t tau, const bool lazy);
+
 //#define torusPolynomialMulR torusPolynomialMultKaratsuba
 //#define torusPolynomialAddMulR torusPolynomialAddMulRKaratsuba
 //#define torusPolynomialSubMulR torusPolynomialSubMulRKaratsuba

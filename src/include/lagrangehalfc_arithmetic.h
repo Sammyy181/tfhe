@@ -41,6 +41,12 @@ EXPORT void torusPolynomialMultFFT(TorusPolynomial* result, const IntPolynomial*
 EXPORT void torusPolynomialAddMulRFFT(TorusPolynomial* result, const IntPolynomial* poly1, const TorusPolynomial* poly2);
 EXPORT void torusPolynomialSubMulRFFT(TorusPolynomial* result, const IntPolynomial* poly1, const TorusPolynomial* poly2);
 
+/**
+ * result = sum_{j<tau} poly1[j] * poly2[j] (mod X^N+1) via FFT. If lazy is true, the products
+ * are accumulated in the Lagrange space and the inverse FFT is done only once.
+ */
+EXPORT void torusPolynomialMultSumFFT(TorusPolynomial* result, const IntPolynomial* const* poly1, const TorusPolynomial* const* poly2, const int32_t tau, const bool lazy);
+
 /** termwise multiplication in Lagrange space */
 EXPORT void LagrangeHalfCPolynomialMul(
 	LagrangeHalfCPolynomial* result, 
