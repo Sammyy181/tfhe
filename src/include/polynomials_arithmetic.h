@@ -124,12 +124,53 @@ EXPORT void torusPolynomialMultToomCook4(TorusPolynomial* result, const IntPolyn
 EXPORT void torusPolynomialMultToomCook5(TorusPolynomial* result, const IntPolynomial* poly1, const TorusPolynomial* poly2);
 
 /**
+ * This function multiplies 2 polynomials (an integer poly and a torus poly) mod X^N+1
+ * by using striding Toom-Cook 4 (interleaved split, negacyclic sub-products) with
+ * Bodrato's interpolation sequence
+ */
+EXPORT void torusPolynomialMultToomCook4Strided(TorusPolynomial* result, const IntPolynomial* poly1, const TorusPolynomial* poly2);
+
+/**
  * result = sum_{j<tau} poly1[j] * poly2[j] (mod X^N+1), by using Toom-Cook 3 (resp. 4).
  * If lazy is true, the interpolation is done only once, on the sum of the products in the
  * evaluation space (instead of once per product). Both modes give the same result.
  */
 EXPORT void torusPolynomialMultSumToomCook3(TorusPolynomial* result, const IntPolynomial* const* poly1, const TorusPolynomial* const* poly2, const int32_t tau, const bool lazy);
 EXPORT void torusPolynomialMultSumToomCook4(TorusPolynomial* result, const IntPolynomial* const* poly1, const TorusPolynomial* const* poly2, const int32_t tau, const bool lazy);
+
+/**
+ * This function multiplies 2 polynomials (an integer poly and a torus poly) mod X^N+1
+ * by using the Number Theoretic Transform (3 primes + CRT). Unlike the FFT, it is exact.
+ * N must be a power of 2 (at most 2^22).
+ */
+EXPORT void torusPolynomialMultNTT(TorusPolynomial* result, const IntPolynomial* poly1, const TorusPolynomial* poly2);
+
+/**
+ * result = sum_{j<tau} poly1[j] * poly2[j] (mod X^N+1), by using the NTT.
+ * If lazy is true, the interpolation (inverse NTT + CRT) is done only once, on the sum of the
+ * products in the evaluation space. Both modes give the same exact result, provided that
+ * tau * N * max|poly1| < 2^58.
+ */
+EXPORT void torusPolynomialMultSumNTT(TorusPolynomial* result, const IntPolynomial* const* poly1, const TorusPolynomial* const* poly2, const int32_t tau, const bool lazy);
+
+/**
+ * Toom-Cook interpolation variants (toom-variants.cpp), used to compare interpolation strategies
+ * under identical evaluation, workspace and recomposition code. "base" is the recursion cutoff
+ * (naive product for sizes <= base). Returns 0 on success, -1 if the recursion depth would exceed
+ * the 32-bit precision budget (nothing is computed), -2 for an unknown variant.
+ */
+enum ToomVariant {
+    TV_T3_OWN = 0,      // classical Toom-3, own interpolation sequence
+    TV_T3_BODRATO = 1,  // classical Toom-3, Bodrato's interpolation sequence
+    TV_T3_GENERIC = 2,  // classical Toom-3, generic (inverse Vandermonde) interpolation
+    TV_T4_BODRATO = 3,  // classical Toom-4, Bodrato's interpolation sequence
+    TV_T4_GENERIC = 4,  // classical Toom-4, generic interpolation
+    TV_T4_STRIDED = 5,  // striding Toom-4 (negacyclic sub-products), Bodrato's sequence
+    TV_T5_GENERIC = 6   // classical Toom-5, generic interpolation
+};
+EXPORT int32_t torusPolynomialMultToomVariant(TorusPolynomial* result, const IntPolynomial* poly1, const TorusPolynomial* poly2, const int32_t variant, const int32_t base);
+/** number of recursion levels used by a variant for size N and cutoff base */
+EXPORT int32_t toomVariantDepth(const int32_t variant, const int32_t N, const int32_t base);
 
 //#define torusPolynomialMulR torusPolynomialMultKaratsuba
 //#define torusPolynomialAddMulR torusPolynomialAddMulRKaratsuba

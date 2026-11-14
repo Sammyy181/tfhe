@@ -10,6 +10,7 @@ set(ENABLE_NAYUKI_PORTABLE ON CACHE BOOL "Enable the Nayuki portable FFT process
 set(ENABLE_NAYUKI_AVX ON CACHE BOOL "Enable the Nayuki AVX assembly FFT processor (MIT)")
 set(ENABLE_SPQLIOS_AVX ON CACHE BOOL "Enable the SPQLIOS AVX assembly FFT processor")
 set(ENABLE_SPQLIOS_FMA ON CACHE BOOL "Enable the SPQLIOS FMA assembly FFT processor")
+set(ENABLE_TOOM4_STRIDED ON CACHE BOOL "Enable the Toom-4 striding (Bodrato) transform processor, exact replacement of the FFT")
 set(ENABLE_TESTS OFF CACHE BOOL "Build the tests (requires googletest)")
 
 project(tfhe)
@@ -34,6 +35,10 @@ set(CMAKE_C_FLAGS_RELEASE "-g0 -march=native -O3 -DNDEBUG -funroll-loops -Wall -
 if (ENABLE_NAYUKI_PORTABLE)
 list(APPEND FFT_PROCESSORS "nayuki-portable")
 endif(ENABLE_NAYUKI_PORTABLE)
+
+if (ENABLE_TOOM4_STRIDED)
+list(APPEND FFT_PROCESSORS "toom4-strided")
+endif(ENABLE_TOOM4_STRIDED)
 
 if (ENABLE_FFTW)
 list(APPEND FFT_PROCESSORS "fftw")

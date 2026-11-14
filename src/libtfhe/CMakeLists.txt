@@ -13,6 +13,8 @@ set(SRCS
     lweparams.cpp
     lwesamples.cpp
     multiplication.cpp
+    ntt-multiplication.cpp
+    toom-variants.cpp
     numeric-functions.cpp
     polynomials.cpp
     tgsw.cpp
