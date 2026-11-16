@@ -27,12 +27,14 @@ struct TFheGateBootstrappingCloudKeySet {
     const TFheGateBootstrappingParameterSet *const params;
     const LweBootstrappingKey *const bk;
     const LweBootstrappingKeyFFT *const bkFFT;
+    const LweBootstrappingKeyNussbaumer *const bkNuss;
 #ifdef __cplusplus
 
     TFheGateBootstrappingCloudKeySet(
             const TFheGateBootstrappingParameterSet *const params,
             const LweBootstrappingKey *const bk,
-            const LweBootstrappingKeyFFT *const bkFFT);
+            const LweBootstrappingKeyFFT *const bkFFT,
+            const LweBootstrappingKeyNussbaumer *const bkNuss);
 
     TFheGateBootstrappingCloudKeySet(const TFheGateBootstrappingCloudKeySet &) = delete;
 
@@ -52,6 +54,7 @@ struct TFheGateBootstrappingSecretKeySet {
             const TFheGateBootstrappingParameterSet *const params,
             const LweBootstrappingKey *const bk,
             const LweBootstrappingKeyFFT *const bkFFT,
+            const LweBootstrappingKeyNussbaumer *const bkNuss,
             const LweKey *lwe_key,
             const TGswKey *tgsw_key);
 

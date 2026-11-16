@@ -1,0 +1,865 @@
+Start testing: Nov 15 21:53 IST
+----------------------------------------------------------
+3/9 Testing: test-decomp-tgsw-nayuki-portable
+3/9 Test: test-decomp-tgsw-nayuki-portable
+Command: "/Users/samarthg/Desktop/Sem_7/BTP/tfhe/build-tests/test/test-decomp-tgsw-nayuki-portable"
+Directory: /Users/samarthg/Desktop/Sem_7/BTP/tfhe/build-tests/test
+"test-decomp-tgsw-nayuki-portable" start time: Nov 15 21:53 IST
+Output:
+----------------------------------------------------------
+-------------
+WARNING:
+All the tests below are supposed to fail with proba: 0
+It is normal and it is part of the test!
+-------------
+Test decompH on TorusPolynomial
+Test TLweSymDecrypt on muB:
+ variance: 1e-12
+Test decompH on TLwe(muB)
+Test cipher after product 3.5 H*muB:
+Test LweSymDecrypt after product 3.5 H*muB:
+ variance: 1e-12
+----------------------
+decryption test tgsw:
+manual decryption test:
+automatic decryption test:
+Test LweSymDecrypt after product 3.5:
+ variance: 0.000536141
+----------------------
+<end of output>
+Test time =   2.49 sec
+----------------------------------------------------------
+Test Passed.
+"test-decomp-tgsw-nayuki-portable" end time: Nov 15 21:53 IST
+"test-decomp-tgsw-nayuki-portable" time elapsed: 00:00:02
+----------------------------------------------------------
+
+4/9 Testing: test-lwe-nayuki-portable
+4/9 Test: test-lwe-nayuki-portable
+Command: "/Users/samarthg/Desktop/Sem_7/BTP/tfhe/build-tests/test/test-lwe-nayuki-portable"
+Directory: /Users/samarthg/Desktop/Sem_7/BTP/tfhe/build-tests/test
+"test-lwe-nayuki-portable" start time: Nov 15 21:53 IST
+Output:
+----------------------------------------------------------
+a = [0.345702, -0.0743097, -0.420755, 0.153011, 0.352487, -0.0191374, -0.372165, 0.127927, 0.0780332, -0.317528, -0.220233, -0.4263, 0.136159, 0.135267, -0.469619, -0.10017, 0.375181, -0.490658, -0.174137, 0.0261969, 0.0112952, 0.0971298, -0.473753, -0.39538, -0.203966, -0.0173742, 0.214301, -0.459912, -0.460717, 0.00593018, -0.0862012, 0.20126, -0.372013, -0.377253, 0.314783, -0.286057, 0.250976, 0.315989, -0.199092, -0.303312, -0.171168, -0.22183, 0.438556, 0.32297, -0.376698, -0.478478, 0.400142, 0.2158, -0.046024, 0.379819, -0.409775, -0.46997, -0.246616, 0.205657, 0.135085, 0.302629, 0.0969815, -0.232419, 0.351471, -0.27572, 0.339972, -0.0882868, -0.00870579, -0.0312145, 0.192778, -0.0265531, 0.493595, -0.321179, 0.453039, -0.424041, -0.440074, 0.0848562, 0.489422, -0.205731, -0.317476, 0.207571, 0.487404, 0.304604, 0.186994, 0.463496, -0.488873, -0.372882, -0.478131, -0.240584, -0.325903, 0.249011, -0.0201507, -0.315823, -0.0163943, 0.35659, 0.48937, -0.40229, -0.349958, 0.24734, -0.439995, -0.375026, -0.129501, -0.0249136, -0.0563271, -0.493255, -0.394795, -0.288356, -0.394669, -0.370661, 0.204386, 0.296618, 0.233358, -0.460885, 0.391228, -0.427966, -0.346093, -0.0379805, -0.00201383, -0.353965, -0.15977, 0.437058, -0.0565762, 0.053448, 0.25287, -0.461368, -0.194757, 0.39058, 0.473431, 0.0923584, -0.202976, 0.00779025, 0.0206074, -0.373578, 0.406445, 0.081671, -0.177262, 0.449781, -0.488879, -0.302225, 0.229047, 0.340443, 0.285992, -0.429641, 0.377685, 0.295057, 0.437823, 0.172898, -0.255099, -0.00838156, -0.48365, 0.426422, 0.0136486, -0.158109, -0.0359222, -0.270903, 0.116098, -0.483943, -0.415297, -0.393656, 0.320227, 0.0817205, 0.384382, 0.216607, 0.117402, 0.0444634, -0.121479, 0.43385, -0.488178, 0.338958, 0.0859216, -0.0545607, -0.122382, -0.469108, -0.13513, -0.06125, 0.154588, 0.149918, 0.00647917, -0.0999672, 0.454673, -0.155332, -0.157552, -0.196579, 0.155243, -0.422224, 0.00290962, 0.157319, -0.146782, 0.257294, -0.478131, -0.447012, 0.319043, -0.135913, -0.103689, 0.222458, -0.434132, 0.233021, 0.247389, -0.153175, -0.280063, -0.372267, -0.0721497, 0.0515962, -0.259116, -0.376199, -0.136388, 0.162547, -0.442364, -0.0526772, -0.284056, -0.094222, -0.292661, 0.445111, 0.414589, -0.283311, -0.47661, -0.240507, 0.0130217, -0.359815, 0.0840849, 0.293332, -0.494415, 0.0568374, -0.416852, 0.398201, 0.291692, -0.0498647, -0.285614, -0.255632, 0.144915, 0.170727, 0.304542, 0.384409, -0.452976, 0.0619216, 0.403383, 0.47474, 0.0346976, 0.0398935, 0.39139, -0.293523, 0.0309367, 0.179027, 0.392113, -0.123165, 0.279048, -0.456027, -0.182546, -0.206273, 0.387688, 0.207502, -0.22155, 0.156349, 0.21725, -0.0496743, -0.0522774, 0.195819, 0.188889, 0.333074, 0.498779, 0.387379, 0.17528, -0.305693, 0.277968, -0.0414258, 0.196679, -0.440157, 0.373564, -0.0667107, -0.11085, 0.185195, 0.0174031, -0.354621, 0.125263, 0.020821, -0.34148, 0.43803, -0.495407, 0.0334639, 0.0477159, -0.464367, -0.437528, -0.495994, 0.14397, 0.355774, -0.0635579, 0.0913446, -0.239325, -0.113246, 0.242992, 0.067704, -0.239852, 0.0847629, 0.197648, -0.14667, -0.411595, -0.108389, -0.0775843, 0.304832, 0.437112, -0.222057, -0.420447, 0.420431, 0.354831, 0.162585, 0.346467, 0.187361, -0.148303, 0.115398, -0.0562677, -0.089053, -0.303335, 0.0245177, -0.391637, -0.41593, -0.35601, 0.331763, -0.0872685, 0.225203, 0.343738, -0.101617, 0.104096, -0.3419, -0.226674, -0.418197, -0.110465, 0.230596, 0.246063, 0.218107, -0.382493, -0.460546, -0.418938, -0.185982, -0.174343, -0.0881168, 0.421149, -0.388029, 0.261055, -0.497881, -0.403269, -0.267688, 0.0210096, 0.00676071, -0.087171, -0.11583, -0.468044, -0.152, -0.141022, 0.411092, -0.0699394, 0.376458, -0.283626, -0.14089, 0.0548819, -0.469106, -0.303757, -0.0513467, 0.169884, 0.114689, -0.258775, 0.158276, -0.112565, 0.0421561, -0.0273743, 0.213602, 0.361696, -0.330594, -0.0154575, -0.230128, -0.0490313, 0.317499, -0.365672, 0.0935017, 0.26329, 0.201943, 0.411, 0.0134257, -0.02506, -0.307042, 0.466096, 0.216629, 0.333559, -0.273159, -0.140993, -0.356051, 0.322585, -0.177297, 0.444469, 0.128476, -0.429054, 0.114867, 0.270686, -0.168642, 0.440875, 0.0933005, -0.145107, -0.249763, 0.0671281, -0.233917, 0.222356, -0.0278558, -0.372742, -0.415311, -0.261867, -0.00996098, -0.24864, -0.105759, -0.490496, -0.224166, 0.300215, -0.499931, 0.478788, 0.0529579, -0.153336, -0.41442, -0.478602, 0.191211, -0.481812, 0.0998922, 0.0118582, -0.244281, -0.20282, 0.00620112, -0.162675, 0.495103, -0.318263, 0.37822, -0.243517, 0.185763, 0.137524, -0.230561, -0.401704, 0.218117, 0.248749, -0.184094, 0.124507, 0.136629, 0.392266, 0.44259, 0.194327, -0.338278, -0.0784374, -0.143941, -0.335089, -0.171822, 0.287996, -0.224448, 0.00936825, 0.334714, 0.323981, -0.245261, 0.39815, -0.247047, 0.050078, 0.305495, -0.307877, -0.341915, 0.330022, -0.3206, 0.0414892, 0.335633, 0.0529728, -0.265657, -0.117469, -0.334368, 0.486401, 0.332755, -0.324571, 0.496099, 0.161699, -0.197027, 0.431896, -0.0399089, -0.205332, 0.0256516, -0.142967, 0.184879, -0.262485, 0.000149472, 0.0390276, -0.485285, 0.396338, -0.332819, -0.268066, -0.00469231, -0.28377, -0.340759, 0.217979, 0.119497, 0.374049, -0.328643, -0.125551, 0.0269125, 0.443053, 0.447392, -0.327723, -0.138859, 0.237309, -0.180297, -0.319164, -0.420877, 0.383466, -0.285447, -0.419257, -0.376595, 0.433911, 0.380877, -0.0871601, 0.373349, -0.266801, 0.375503, 0.0727937, -0.456548, 0.393561, 0.262632, 0.435456, 0.0887263]
+b = -0.354567
+phi = -0.488932
+message = -0.5
+There were 0 failures out of 1000 trials
+(it might be normal)
+<end of output>
+Test time =   2.51 sec
+----------------------------------------------------------
+Test Passed.
+"test-lwe-nayuki-portable" end time: Nov 15 21:53 IST
+"test-lwe-nayuki-portable" time elapsed: 00:00:02
+----------------------------------------------------------
+
+5/9 Testing: test-multiplication-nayuki-portable
+5/9 Test: test-multiplication-nayuki-portable
+Command: "/Users/samarthg/Desktop/Sem_7/BTP/tfhe/build-tests/test/test-multiplication-nayuki-portable"
+Directory: /Users/samarthg/Desktop/Sem_7/BTP/tfhe/build-tests/test
+"test-multiplication-nayuki-portable" start time: Nov 15 21:53 IST
+Output:
+----------------------------------------------------------
+Assertion failed: (fabs(imag_inout[i])<1e-8), function check_alternate_real, file fft_processor_nayuki.cpp, line 22.
+<end of output>
+Test time =   0.53 sec
+----------------------------------------------------------
+Test Failed.
+"test-multiplication-nayuki-portable" end time: Nov 15 21:53 IST
+"test-multiplication-nayuki-portable" time elapsed: 00:00:00
+----------------------------------------------------------
+
+1/9 Testing: unittests-nayuki-portable
+1/9 Test: unittests-nayuki-portable
+Command: "/Users/samarthg/Desktop/Sem_7/BTP/tfhe/build-tests/test/unittests-nayuki-portable"
+Directory: /Users/samarthg/Desktop/Sem_7/BTP/tfhe/build-tests/test
+"unittests-nayuki-portable" start time: Nov 15 21:53 IST
+Output:
+----------------------------------------------------------
+Running main() from gtest_main.cc
+[==========] Running 115 tests from 24 test cases.
+[----------] Global test environment set-up.
+[----------] 5 tests from ArithmeticTest
+[ RUN      ] ArithmeticTest.gaussian32
+[       OK ] ArithmeticTest.gaussian32 (0 ms)
+[ RUN      ] ArithmeticTest.dtot32
+[       OK ] ArithmeticTest.dtot32 (0 ms)
+[ RUN      ] ArithmeticTest.approxPhase
+[       OK ] ArithmeticTest.approxPhase (0 ms)
+[ RUN      ] ArithmeticTest.modSwitchFromTorus32
+[       OK ] ArithmeticTest.modSwitchFromTorus32 (0 ms)
+[ RUN      ] ArithmeticTest.modSwitchToTorus32
+[       OK ] ArithmeticTest.modSwitchToTorus32 (0 ms)
+[----------] 5 tests from ArithmeticTest (0 ms total)
+
+[----------] 8 tests from LweTest
+[ RUN      ] LweTest.lweKeyGen
+[       OK ] LweTest.lweKeyGen (0 ms)
+[ RUN      ] LweTest.lweSymEncryptPhaseDecrypt
+[       OK ] LweTest.lweSymEncryptPhaseDecrypt (5 ms)
+[ RUN      ] LweTest.lweClear
+[       OK ] LweTest.lweClear (0 ms)
+[ RUN      ] LweTest.lweNoiselessTrivial
+[       OK ] LweTest.lweNoiselessTrivial (0 ms)
+[ RUN      ] LweTest.lweAddTo
+[       OK ] LweTest.lweAddTo (1 ms)
+[ RUN      ] LweTest.lweSubTo
+[       OK ] LweTest.lweSubTo (0 ms)
+[ RUN      ] LweTest.lweAddMulTo
+[       OK ] LweTest.lweAddMulTo (0 ms)
+[ RUN      ] LweTest.lweSubMulTo
+[       OK ] LweTest.lweSubMulTo (0 ms)
+[----------] 8 tests from LweTest (6 ms total)
+
+[----------] 19 tests from PolynomialTest
+[ RUN      ] PolynomialTest.torusPolynomialUniform
+[       OK ] PolynomialTest.torusPolynomialUniform (10 ms)
+[ RUN      ] PolynomialTest.torusPolynomialClear
+[       OK ] PolynomialTest.torusPolynomialClear (0 ms)
+[ RUN      ] PolynomialTest.torusPolynomialCopy
+[       OK ] PolynomialTest.torusPolynomialCopy (1 ms)
+[ RUN      ] PolynomialTest.torusPolynomialAdd
+[       OK ] PolynomialTest.torusPolynomialAdd (0 ms)
+[ RUN      ] PolynomialTest.torusPolynomialAddTo
+[       OK ] PolynomialTest.torusPolynomialAddTo (1 ms)
+[ RUN      ] PolynomialTest.torusPolynomialSub
+[       OK ] PolynomialTest.torusPolynomialSub (0 ms)
+[ RUN      ] PolynomialTest.torusPolynomialSubTo
+[       OK ] PolynomialTest.torusPolynomialSubTo (1 ms)
+[ RUN      ] PolynomialTest.torusPolynomialAddMulZ
+[       OK ] PolynomialTest.torusPolynomialAddMulZ (0 ms)
+[ RUN      ] PolynomialTest.torusPolynomialAddMulZTo
+[       OK ] PolynomialTest.torusPolynomialAddMulZTo (1 ms)
+[ RUN      ] PolynomialTest.torusPolynomialSubMulZ
+[       OK ] PolynomialTest.torusPolynomialSubMulZ (0 ms)
+[ RUN      ] PolynomialTest.torusPolynomialSubMulZTo
+[       OK ] PolynomialTest.torusPolynomialSubMulZTo (1 ms)
+[ RUN      ] PolynomialTest.torusPolynomialMulByXai
+[       OK ] PolynomialTest.torusPolynomialMulByXai (20 ms)
+[ RUN      ] PolynomialTest.intPolynomialMulByXaiMinusOne
+[       OK ] PolynomialTest.intPolynomialMulByXaiMinusOne (21 ms)
+[ RUN      ] PolynomialTest.torusPolynomialMulByXaiMinusOne
+[       OK ] PolynomialTest.torusPolynomialMulByXaiMinusOne (22 ms)
+[ RUN      ] PolynomialTest.intPolynomialNormSq2
+[       OK ] PolynomialTest.intPolynomialNormSq2 (11 ms)
+[ RUN      ] PolynomialTest.torusPolynomialMultNaive
+[       OK ] PolynomialTest.torusPolynomialMultNaive (212 ms)
+[ RUN      ] PolynomialTest.torusPolynomialMultKaratsuba
+[       OK ] PolynomialTest.torusPolynomialMultKaratsuba (153 ms)
+[ RUN      ] PolynomialTest.torusPolynomialAddMulRKaratsuba
+[       OK ] PolynomialTest.torusPolynomialAddMulRKaratsuba (133 ms)
+[ RUN      ] PolynomialTest.torusPolynomialSubMulRKaratsuba
+[       OK ] PolynomialTest.torusPolynomialSubMulRKaratsuba (124 ms)
+[----------] 19 tests from PolynomialTest (711 ms total)
+
+[----------] 12 tests from TLweTest
+[ RUN      ] TLweTest.tLweKeyGen
+[       OK ] TLweTest.tLweKeyGen (0 ms)
+[ RUN      ] TLweTest.tLweSymEncryptPhaseDecryptT
+[       OK ] TLweTest.tLweSymEncryptPhaseDecryptT (38 ms)
+[ RUN      ] TLweTest.tLweSymEncryptPhaseDecrypt
+[       OK ] TLweTest.tLweSymEncryptPhaseDecrypt (38 ms)
+[ RUN      ] TLweTest.tLweClear
+[       OK ] TLweTest.tLweClear (1 ms)
+[ RUN      ] TLweTest.tLweCopy
+[       OK ] TLweTest.tLweCopy (1 ms)
+[ RUN      ] TLweTest.tLweNoiselessTrivial
+[       OK ] TLweTest.tLweNoiselessTrivial (1 ms)
+[ RUN      ] TLweTest.tLweAddTo
+[       OK ] TLweTest.tLweAddTo (2 ms)
+[ RUN      ] TLweTest.tLweSubTo
+[       OK ] TLweTest.tLweSubTo (1 ms)
+[ RUN      ] TLweTest.tLweAddMulTo
+[       OK ] TLweTest.tLweAddMulTo (2 ms)
+[ RUN      ] TLweTest.tLweSubMulTo
+[       OK ] TLweTest.tLweSubMulTo (1 ms)
+[ RUN      ] TLweTest.tLweAddTTo
+[       OK ] TLweTest.tLweAddTTo (1 ms)
+[ RUN      ] TLweTest.tLweAddRTTo
+[       OK ] TLweTest.tLweAddRTTo (1 ms)
+[----------] 12 tests from TLweTest (87 ms total)
+
+[----------] 6 tests from TGswTest
+[ RUN      ] TGswTest.tGswKeyGen
+[       OK ] TGswTest.tGswKeyGen (1 ms)
+[ RUN      ] TGswTest.tGswClear
+[       OK ] TGswTest.tGswClear (0 ms)
+[ RUN      ] TGswTest.tGswEncryptZero
+[       OK ] TGswTest.tGswEncryptZero (0 ms)
+[ RUN      ] TGswTest.tGswExternProduct
+[       OK ] TGswTest.tGswExternProduct (63 ms)
+[ RUN      ] TGswTest.tGswMulByXaiMinusOne
+[       OK ] TGswTest.tGswMulByXaiMinusOne (31 ms)
+[ RUN      ] TGswTest.tGswExternMulToTLwe
+[       OK ] TGswTest.tGswExternMulToTLwe (70 ms)
+[----------] 6 tests from TGswTest (165 ms total)
+
+[----------] 3 tests from TGswFakeTest
+[ RUN      ] TGswFakeTest.tGswSymEncrypt
+[       OK ] TGswFakeTest.tGswSymEncrypt (0 ms)
+[ RUN      ] TGswFakeTest.tGswSymEncryptInt
+[       OK ] TGswFakeTest.tGswSymEncryptInt (0 ms)
+[ RUN      ] TGswFakeTest.tGswNoiselessTrivial
+[       OK ] TGswFakeTest.tGswNoiselessTrivial (0 ms)
+[----------] 3 tests from TGswFakeTest (0 ms total)
+
+[----------] 5 tests from TGswDirectTest
+[ RUN      ] TGswDirectTest.tGswAddH
+[       OK ] TGswDirectTest.tGswAddH (9 ms)
+[ RUN      ] TGswDirectTest.tGswAddMuH
+[       OK ] TGswDirectTest.tGswAddMuH (8 ms)
+[ RUN      ] TGswDirectTest.tGswAddMuIntH
+[       OK ] TGswDirectTest.tGswAddMuIntH (7 ms)
+[ RUN      ] TGswDirectTest.tGswTorus32PolynomialDecompH
+[       OK ] TGswDirectTest.tGswTorus32PolynomialDecompH (1 ms)
+[ RUN      ] TGswDirectTest.tGswTLweDecompH
+[       OK ] TGswDirectTest.tGswTLweDecompH (1 ms)
+[----------] 5 tests from TGswDirectTest (26 ms total)
+
+[----------] 4 tests from TLweFFTTest
+[ RUN      ] TLweFFTTest.tLweToFFTConvert
+[       OK ] TLweFFTTest.tLweToFFTConvert (0 ms)
+[ RUN      ] TLweFFTTest.tLweFromFFTConvert
+[       OK ] TLweFFTTest.tLweFromFFTConvert (0 ms)
+[ RUN      ] TLweFFTTest.tLweFFTClear
+[       OK ] TLweFFTTest.tLweFFTClear (0 ms)
+[ RUN      ] TLweFFTTest.tLweAddMulRTo
+[       OK ] TLweFFTTest.tLweAddMulRTo (2 ms)
+[----------] 4 tests from TLweFFTTest (2 ms total)
+
+[----------] 6 tests from TGswFFTTest
+[ RUN      ] TGswFFTTest.tGswToFFTConvert
+[       OK ] TGswFFTTest.tGswToFFTConvert (2 ms)
+[ RUN      ] TGswFFTTest.tGswFromFFTConvert
+[       OK ] TGswFFTTest.tGswFromFFTConvert (2 ms)
+[ RUN      ] TGswFFTTest.tGswFFTAddH
+[       OK ] TGswFFTTest.tGswFFTAddH (0 ms)
+[ RUN      ] TGswFFTTest.tGswFFTClear
+[       OK ] TGswFFTTest.tGswFFTClear (2 ms)
+[ RUN      ] TGswFFTTest.tGswFFTExternMulToTLwe
+[       OK ] TGswFFTTest.tGswFFTExternMulToTLwe (63 ms)
+[ RUN      ] TGswFFTTest.tGswFFTMulByXaiMinusOne
+[       OK ] TGswFFTTest.tGswFFTMulByXaiMinusOne (0 ms)
+[----------] 6 tests from TGswFFTTest (69 ms total)
+
+[----------] 2 tests from LweKeySwitchTest
+[ RUN      ] LweKeySwitchTest.lweCreateKeySwitchKey_fromArray
+[       OK ] LweKeySwitchTest.lweCreateKeySwitchKey_fromArray (15 ms)
+[ RUN      ] LweKeySwitchTest.lweKeySwitchTranslate_fromArray
+[       OK ] LweKeySwitchTest.lweKeySwitchTranslate_fromArray (16 ms)
+[----------] 2 tests from LweKeySwitchTest (32 ms total)
+
+[----------] 1 test from TfheBlindRotateTest
+[ RUN      ] TfheBlindRotateTest.tfheBlindRotateTest
+[       OK ] TfheBlindRotateTest.tfheBlindRotateTest (636 ms)
+[----------] 1 test from TfheBlindRotateTest (636 ms total)
+
+[----------] 1 test from TfheBlindRotateAndExtractTest
+[ RUN      ] TfheBlindRotateAndExtractTest.tfheBlindRotateAndExtractTest
+[       OK ] TfheBlindRotateAndExtractTest.tfheBlindRotateAndExtractTest (3 ms)
+[----------] 1 test from TfheBlindRotateAndExtractTest (3 ms total)
+
+[----------] 1 test from TfheBootstrapWoKSTest
+[ RUN      ] TfheBootstrapWoKSTest.tfheBootstrapWoKSTest
+[       OK ] TfheBootstrapWoKSTest.tfheBootstrapWoKSTest (1 ms)
+[----------] 1 test from TfheBootstrapWoKSTest (1 ms total)
+
+[----------] 1 test from TfheBootstrapTest
+[ RUN      ] TfheBootstrapTest.tfheBootstrapTest
+[       OK ] TfheBootstrapTest.tfheBootstrapTest (0 ms)
+[----------] 1 test from TfheBootstrapTest (0 ms total)
+
+[----------] 1 test from TfheCreateBootstrapKeyTest
+[ RUN      ] TfheCreateBootstrapKeyTest.createBootstrappingKeyTest
+[       OK ] TfheCreateBootstrapKeyTest.createBootstrappingKeyTest (4 ms)
+[----------] 1 test from TfheCreateBootstrapKeyTest (4 ms total)
+
+[----------] 1 test from TfheBlindRotateFFTTest
+[ RUN      ] TfheBlindRotateFFTTest.tfheBlindRotateFFTTest
+[       OK ] TfheBlindRotateFFTTest.tfheBlindRotateFFTTest (472 ms)
+[----------] 1 test from TfheBlindRotateFFTTest (472 ms total)
+
+[----------] 1 test from TfheBlindRotateAndExtractFFTTest
+[ RUN      ] TfheBlindRotateAndExtractFFTTest.tfheBlindRotateAndExtractFFTTest
+[       OK ] TfheBlindRotateAndExtractFFTTest.tfheBlindRotateAndExtractFFTTest (3 ms)
+[----------] 1 test from TfheBlindRotateAndExtractFFTTest (3 ms total)
+
+[----------] 1 test from TfheBootstrapWoKSFFTTest
+[ RUN      ] TfheBootstrapWoKSFFTTest.tfheBootstrapWoKSFFTTest
+[       OK ] TfheBootstrapWoKSFFTTest.tfheBootstrapWoKSFFTTest (4 ms)
+[----------] 1 test from TfheBootstrapWoKSFFTTest (4 ms total)
+
+[----------] 1 test from TfheBootstrapFFTTest
+[ RUN      ] TfheBootstrapFFTTest.tfheBootstrapFFTTest
+[       OK ] TfheBootstrapFFTTest.tfheBootstrapFFTTest (0 ms)
+[----------] 1 test from TfheBootstrapFFTTest (0 ms total)
+
+[----------] 1 test from TfheInitLweBootstrappingKeyFFTTest
+[ RUN      ] TfheInitLweBootstrappingKeyFFTTest.tfheInitLweBootstrappingKeyFFTTest
+[       OK ] TfheInitLweBootstrappingKeyFFTTest.tfheInitLweBootstrappingKeyFFTTest (6 ms)
+[----------] 1 test from TfheInitLweBootstrappingKeyFFTTest (6 ms total)
+
+[----------] 12 tests from IOTest
+[ RUN      ] IOTest.LweParamsIO
+-----BEGIN LWEPARAMS-----
+alpha_max: 0.30000000
+alpha_min: 0.10000000
+n:        500
+-----END LWEPARAMS-----
+-----BEGIN LWEPARAMS-----
+alpha_max: 0.30000000
+alpha_min: 0.10000000
+n:        120
+-----END LWEPARAMS-----
+[       OK ] IOTest.LweParamsIO (0 ms)
+[ RUN      ] IOTest.TLweParamsIO
+-----BEGIN TLWEPARAMS-----
+N:       1024
+alpha_max: 0.30000000
+alpha_min: 0.10000000
+k:          1
+-----END TLWEPARAMS-----
+-----BEGIN TLWEPARAMS-----
+N:        128
+alpha_max: 0.30000000
+alpha_min: 0.10000000
+k:          2
+-----END TLWEPARAMS-----
+[       OK ] IOTest.TLweParamsIO (0 ms)
+[ RUN      ] IOTest.TGswParamsIO
+-----BEGIN TLWEPARAMS-----
+N:       1024
+alpha_max: 0.30000000
+alpha_min: 0.10000000
+k:          1
+-----END TLWEPARAMS-----
+-----BEGIN TGSWPARAMS-----
+Bgbit:         15
+l:          3
+-----END TGSWPARAMS-----
+-----BEGIN TLWEPARAMS-----
+N:        128
+alpha_max: 0.30000000
+alpha_min: 0.10000000
+k:          2
+-----END TLWEPARAMS-----
+-----BEGIN TGSWPARAMS-----
+Bgbit:          4
+l:          7
+-----END TGSWPARAMS-----
+[       OK ] IOTest.TGswParamsIO (0 ms)
+[ RUN      ] IOTest.LweKeyIO
+[       OK ] IOTest.LweKeyIO (1 ms)
+[ RUN      ] IOTest.TLweKeyIO
+[       OK ] IOTest.TLweKeyIO (0 ms)
+[ RUN      ] IOTest.TGswKeyIO
+[       OK ] IOTest.TGswKeyIO (0 ms)
+[ RUN      ] IOTest.LweSampleIO
+[       OK ] IOTest.LweSampleIO (0 ms)
+[ RUN      ] IOTest.TLweSampleIO
+[       OK ] IOTest.TLweSampleIO (0 ms)
+[ RUN      ] IOTest.TGswSampleIO
+[       OK ] IOTest.TGswSampleIO (1 ms)
+[ RUN      ] IOTest.LweKeySwitchKeyIO
+[       OK ] IOTest.LweKeySwitchKeyIO (14 ms)
+[ RUN      ] IOTest.LweBootstrappingKeyIO
+[       OK ] IOTest.LweBootstrappingKeyIO (20 ms)
+[ RUN      ] IOTest.TFheGateBootstrappingParameterSetIO
+-----BEGIN GATEBOOTSPARAMS-----
+ks_basebit:          2
+ks_t:          6
+-----END GATEBOOTSPARAMS-----
+-----BEGIN LWEPARAMS-----
+alpha_max: 0.30000000
+alpha_min: 0.10000000
+n:        120
+-----END LWEPARAMS-----
+-----BEGIN TLWEPARAMS-----
+N:        128
+alpha_max: 0.30000000
+alpha_min: 0.10000000
+k:          2
+-----END TLWEPARAMS-----
+-----BEGIN TGSWPARAMS-----
+Bgbit:          4
+l:          7
+-----END TGSWPARAMS-----
+[       OK ] IOTest.TFheGateBootstrappingParameterSetIO (0 ms)
+[----------] 12 tests from IOTest (36 ms total)
+
+[----------] 2 tests from IOTest2
+[ RUN      ] IOTest2.TFheGateBootstrappingCloudKeySetIO
+[       OK ] IOTest2.TFheGateBootstrappingCloudKeySetIO (19 ms)
+[ RUN      ] IOTest2.TFheGateBootstrappingSecretKeySetIO
+[       OK ] IOTest2.TFheGateBootstrappingSecretKeySetIO (18 ms)
+[----------] 2 tests from IOTest2 (37 ms total)
+
+[----------] 8 tests from LagrangeHalfcTest
+[ RUN      ] LagrangeHalfcTest.fftIsBijective
+[       OK ] LagrangeHalfcTest.fftIsBijective (3 ms)
+[ RUN      ] LagrangeHalfcTest.LagrangeHalfCPolynomialClear
+[       OK ] LagrangeHalfcTest.LagrangeHalfCPolynomialClear (2 ms)
+[ RUN      ] LagrangeHalfcTest.LagrangeHalfCPolynomialSetTorusConstant
+[       OK ] LagrangeHalfcTest.LagrangeHalfCPolynomialSetTorusConstant (2 ms)
+[ RUN      ] LagrangeHalfcTest.LagrangeHalfCPolynomialAddTorusConstant
+[       OK ] LagrangeHalfcTest.LagrangeHalfCPolynomialAddTorusConstant (3 ms)
+[ RUN      ] LagrangeHalfcTest.torusPolynomialMultFFT
+[       OK ] LagrangeHalfcTest.torusPolynomialMultFFT (9 ms)
+[ RUN      ] LagrangeHalfcTest.torusPolynomialAddMulRFFT
+[       OK ] LagrangeHalfcTest.torusPolynomialAddMulRFFT (8 ms)
+[ RUN      ] LagrangeHalfcTest.torusPolynomialSubMulRFFT
+[       OK ] LagrangeHalfcTest.torusPolynomialSubMulRFFT (10 ms)
+[ RUN      ] LagrangeHalfcTest.LagrangeHalfCPolynomialAddTo
+[       OK ] LagrangeHalfcTest.LagrangeHalfCPolynomialAddTo (4 ms)
+[----------] 8 tests from LagrangeHalfcTest (41 ms total)
+
+[----------] 13 tests from BootsGateTest
+[ RUN      ] BootsGateTest.NandTest
+[       OK ] BootsGateTest.NandTest (0 ms)
+[ RUN      ] BootsGateTest.AndTest
+[       OK ] BootsGateTest.AndTest (0 ms)
+[ RUN      ] BootsGateTest.AndNYTest
+[       OK ] BootsGateTest.AndNYTest (0 ms)
+[ RUN      ] BootsGateTest.AndYNTest
+[       OK ] BootsGateTest.AndYNTest (0 ms)
+[ RUN      ] BootsGateTest.NorTest
+[       OK ] BootsGateTest.NorTest (0 ms)
+[ RUN      ] BootsGateTest.OrTest
+[       OK ] BootsGateTest.OrTest (0 ms)
+[ RUN      ] BootsGateTest.OrNYTest
+[       OK ] BootsGateTest.OrNYTest (0 ms)
+[ RUN      ] BootsGateTest.OrYNTest
+[       OK ] BootsGateTest.OrYNTest (0 ms)
+[ RUN      ] BootsGateTest.XorTest
+[       OK ] BootsGateTest.XorTest (0 ms)
+[ RUN      ] BootsGateTest.XnorTest
+[       OK ] BootsGateTest.XnorTest (0 ms)
+[ RUN      ] BootsGateTest.NotTest
+[       OK ] BootsGateTest.NotTest (0 ms)
+[ RUN      ] BootsGateTest.CopyTest
+[       OK ] BootsGateTest.CopyTest (0 ms)
+[ RUN      ] BootsGateTest.MuxTest
+[       OK ] BootsGateTest.MuxTest (0 ms)
+[----------] 13 tests from BootsGateTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 115 tests from 24 test cases ran. (2341 ms total)
+[  PASSED  ] 115 tests.
+<end of output>
+Test time =   4.84 sec
+----------------------------------------------------------
+Test Passed.
+"unittests-nayuki-portable" end time: Nov 15 21:53 IST
+"unittests-nayuki-portable" time elapsed: 00:00:04
+----------------------------------------------------------
+
+6/9 Testing: test-tlwe-nayuki-portable
+6/9 Test: test-tlwe-nayuki-portable
+Command: "/Users/samarthg/Desktop/Sem_7/BTP/tfhe/build-tests/test/test-tlwe-nayuki-portable"
+Directory: /Users/samarthg/Desktop/Sem_7/BTP/tfhe/build-tests/test
+"test-tlwe-nayuki-portable" start time: Nov 15 21:53 IST
+Output:
+----------------------------------------------------------
+-------------
+WARNING:
+All the tests below are supposed to fail with proba: 0.000355039
+It is normal and it is part of the test!
+-------------
+Test LweSymDecrypt :
+----------------------
+Test LweSymDecryptT: trial 587
+613566756 =? 1227133513 Error!!!
+----------------------
+
+
+-------------------------
+TEST Operations TLwe :
+-------------------------
+Test tLweAddTo Trial : 1
+3 =? 2 error!!!
+5 =? 6 error!!!
+2 =? 3 error!!!
+4 =? 5 error!!!
+2 =? 3 error!!!
+0 =? 1 error!!!
+0 =? 6 error!!!
+4 =? 5 error!!!
+2 =? 1 error!!!
+6 =? 0 error!!!
+5 =? 4 error!!!
+0 =? 6 error!!!
+0 =? 6 error!!!
+5 =? 4 error!!!
+5 =? 6 error!!!
+0.0008
+----------------------
+Test tLweSubTo Trial : 1
+2 =? 3 error!!!
+6 =? 5 error!!!
+2 =? 3 error!!!
+0 =? 1 error!!!
+1 =? 0 error!!!
+2 =? 3 error!!!
+0 =? 6 error!!!
+5 =? 4 error!!!
+2 =? 1 error!!!
+3 =? 2 error!!!
+6 =? 0 error!!!
+1 =? 2 error!!!
+4 =? 5 error!!!
+0.0008
+----------------------
+Test tLweAddMulTo Trial :1
+3 =? 2 error!!!
+5 =? 6 error!!!
+2 =? 3 error!!!
+4 =? 5 error!!!
+2 =? 3 error!!!
+0 =? 1 error!!!
+0 =? 6 error!!!
+4 =? 5 error!!!
+2 =? 1 error!!!
+6 =? 0 error!!!
+5 =? 4 error!!!
+0 =? 6 error!!!
+0 =? 6 error!!!
+5 =? 4 error!!!
+5 =? 6 error!!!
+0.0008
+----------------------
+Test tLweSubMulTo Trial :1
+2 =? 3 error!!!
+6 =? 5 error!!!
+2 =? 3 error!!!
+0 =? 1 error!!!
+1 =? 0 error!!!
+2 =? 3 error!!!
+0 =? 6 error!!!
+5 =? 4 error!!!
+2 =? 1 error!!!
+3 =? 2 error!!!
+6 =? 0 error!!!
+1 =? 2 error!!!
+4 =? 5 error!!!
+0.0008
+----------------------
+
+
+-----------------------------------------------
+TEST Operations TLwe with Torus32 messages :
+-----------------------------------------------
+Test tLweSubTo Trial : 71
+2 =? 1 Error!!!
+0.0008
+----------------------
+Test tLweSubMulTo Trial : 71
+2 =? 1 Error!!!
+0.0008
+----------------------
+Test tLweSubTo Trial : 72
+6 =? 5 Error!!!
+0.0008
+----------------------
+Test tLweSubMulTo Trial : 72
+6 =? 5 Error!!!
+0.0008
+----------------------
+Test tLweAddTo Trial : 120
+4 =? 3 Error!!!
+0.0008
+----------------------
+Test tLweAddMulTo Trial : 120
+4 =? 3 Error!!!
+0.0008
+----------------------
+Test tLweSubTo Trial : 125
+0 =? 6 Error!!!
+0.0008
+----------------------
+Test tLweSubMulTo Trial : 125
+0 =? 6 Error!!!
+0.0008
+----------------------
+Test tLweAddTo Trial : 158
+5 =? 6 Error!!!
+0.0008
+----------------------
+Test tLweAddMulTo Trial : 158
+5 =? 6 Error!!!
+0.0008
+----------------------
+Test tLweSubTo Trial : 263
+3 =? 4 Error!!!
+0.0008
+----------------------
+Test tLweSubMulTo Trial : 263
+3 =? 4 Error!!!
+0.0008
+----------------------
+Test tLweSubTo Trial : 343
+4 =? 3 Error!!!
+0.0008
+----------------------
+Test tLweSubMulTo Trial : 343
+4 =? 3 Error!!!
+0.0008
+----------------------
+Test tLweSubTo Trial : 347
+2 =? 1 Error!!!
+0.0008
+----------------------
+Test tLweSubMulTo Trial : 347
+2 =? 1 Error!!!
+0.0008
+----------------------
+Test tLweAddTo Trial : 361
+5 =? 4 Error!!!
+0.0008
+----------------------
+Test tLweAddMulTo Trial : 361
+5 =? 4 Error!!!
+0.0008
+----------------------
+Test tLweSubTo Trial : 415
+6 =? 0 Error!!!
+0.0008
+----------------------
+Test tLweSubMulTo Trial : 415
+6 =? 0 Error!!!
+0.0008
+----------------------
+Test tLweSubTo Trial : 458
+3 =? 2 Error!!!
+0.0008
+----------------------
+Test tLweSubMulTo Trial : 458
+3 =? 2 Error!!!
+0.0008
+----------------------
+Test tLweAddTo Trial : 491
+2 =? 1 Error!!!
+0.0008
+----------------------
+Test tLweAddMulTo Trial : 491
+2 =? 1 Error!!!
+0.0008
+----------------------
+Test tLweSubTo Trial : 514
+6 =? 0 Error!!!
+0.0008
+----------------------
+Test tLweSubMulTo Trial : 514
+6 =? 0 Error!!!
+0.0008
+----------------------
+Test tLweAddTo Trial : 575
+4 =? 5 Error!!!
+0.0008
+----------------------
+Test tLweAddMulTo Trial : 575
+4 =? 5 Error!!!
+0.0008
+----------------------
+Test tLweAddTo Trial : 582
+2 =? 1 Error!!!
+0.0008
+----------------------
+Test tLweAddMulTo Trial : 582
+2 =? 1 Error!!!
+0.0008
+----------------------
+Test tLweSubTo Trial : 586
+2 =? 1 Error!!!
+0.0008
+----------------------
+Test tLweSubMulTo Trial : 586
+2 =? 1 Error!!!
+0.0008
+----------------------
+Test tLweSubTo Trial : 589
+2 =? 3 Error!!!
+0.0008
+----------------------
+Test tLweSubMulTo Trial : 589
+2 =? 3 Error!!!
+0.0008
+----------------------
+Test tLweAddTo Trial : 665
+2 =? 3 Error!!!
+0.0008
+----------------------
+Test tLweAddMulTo Trial : 665
+2 =? 3 Error!!!
+0.0008
+----------------------
+Test tLweSubTo Trial : 802
+1 =? 0 Error!!!
+0.0008
+----------------------
+Test tLweSubMulTo Trial : 802
+1 =? 0 Error!!!
+0.0008
+----------------------
+Test tLweSubTo Trial : 858
+2 =? 3 Error!!!
+0.0008
+----------------------
+Test tLweSubMulTo Trial : 858
+2 =? 3 Error!!!
+0.0008
+----------------------
+Test tLweSubTo Trial : 990
+1 =? 0 Error!!!
+0.0008
+----------------------
+Test tLweSubMulTo Trial : 990
+1 =? 0 Error!!!
+0.0008
+----------------------
+<end of output>
+Test time =   7.90 sec
+----------------------------------------------------------
+Test Passed.
+"test-tlwe-nayuki-portable" end time: Nov 15 21:54 IST
+"test-tlwe-nayuki-portable" time elapsed: 00:00:07
+----------------------------------------------------------
+
+2/9 Testing: test-bootstrapping-fft-nayuki-portable
+2/9 Test: test-bootstrapping-fft-nayuki-portable
+Command: "/Users/samarthg/Desktop/Sem_7/BTP/tfhe/build-tests/test/test-bootstrapping-fft-nayuki-portable"
+Directory: /Users/samarthg/Desktop/Sem_7/BTP/tfhe/build-tests/test
+"test-bootstrapping-fft-nayuki-portable" start time: Nov 15 21:53 IST
+Output:
+----------------------------------------------------------
+DEBUG MODE!
+starting bootstrapping...
+finished 50 bootstrappings
+time per bootstrapping (microsecs)... 620782
+phase 0 = 0.128084
+phase 1 = 0.125689
+phase 2 = 0.131356
+phase 3 = 0.123937
+phase 4 = 0.120051
+phase 5 = 0.127404
+phase 6 = 0.122709
+phase 7 = 0.129765
+phase 8 = 0.124818
+phase 9 = 0.126557
+phase 10 = 0.131434
+phase 11 = 0.118194
+phase 12 = 0.119448
+phase 13 = 0.12664
+phase 14 = 0.128516
+phase 15 = 0.12513
+phase 16 = 0.119701
+phase 17 = 0.123793
+phase 18 = 0.124763
+phase 19 = 0.127397
+phase 20 = 0.127425
+phase 21 = 0.119337
+phase 22 = 0.126514
+phase 23 = 0.130286
+phase 24 = 0.124871
+phase 25 = -0.124291
+phase 26 = -0.126028
+phase 27 = -0.128923
+phase 28 = -0.127135
+phase 29 = -0.126556
+phase 30 = -0.123537
+phase 31 = -0.127115
+phase 32 = -0.125309
+phase 33 = -0.122924
+phase 34 = -0.118509
+phase 35 = -0.123036
+phase 36 = -0.122124
+phase 37 = -0.127937
+phase 38 = -0.121908
+phase 39 = -0.127561
+phase 40 = -0.126354
+phase 41 = -0.122003
+phase 42 = -0.130919
+phase 43 = -0.124988
+phase 44 = -0.121242
+phase 45 = -0.12316
+phase 46 = -0.12725
+phase 47 = -0.125967
+phase 48 = -0.128796
+phase 49 = -0.125525
+<end of output>
+Test time =  37.64 sec
+----------------------------------------------------------
+Test Passed.
+"test-bootstrapping-fft-nayuki-portable" end time: Nov 15 21:54 IST
+"test-bootstrapping-fft-nayuki-portable" time elapsed: 00:00:37
+----------------------------------------------------------
+
+9/9 Testing: test-c-binding-nayuki-portable
+9/9 Test: test-c-binding-nayuki-portable
+Command: "/Users/samarthg/Desktop/Sem_7/BTP/tfhe/build-tests/test/test-c-binding-nayuki-portable"
+Directory: /Users/samarthg/Desktop/Sem_7/BTP/tfhe/build-tests/test
+"test-c-binding-nayuki-portable" start time: Nov 15 21:54 IST
+Output:
+----------------------------------------------------------
+DEBUG MODE!
+in_message: -1073741824
+starting bootstrapping...
+finished bootstrapping in (microsecs)... 1933300.920000
+end_variance: 0.001922
+end_phase: -1138834394
+ end_message: -1073741824
+<end of output>
+Test time =  99.92 sec
+----------------------------------------------------------
+Test Passed.
+"test-c-binding-nayuki-portable" end time: Nov 15 21:55 IST
+"test-c-binding-nayuki-portable" time elapsed: 00:01:39
+----------------------------------------------------------
+
+7/9 Testing: test-gate-bootstrapping-nayuki-portable
+7/9 Test: test-gate-bootstrapping-nayuki-portable
+Command: "/Users/samarthg/Desktop/Sem_7/BTP/tfhe/build-tests/test/test-gate-bootstrapping-nayuki-portable"
+Directory: /Users/samarthg/Desktop/Sem_7/BTP/tfhe/build-tests/test
+"test-gate-bootstrapping-nayuki-portable" start time: Nov 15 21:53 IST
+Output:
+----------------------------------------------------------
+DEBUG MODE!
+starting bootstrapping NAND tree...trial 0
+finished bootstrappings NAND tree
+time per bootNAND gate (microsecs)... 620029
+starting bootstrapping NAND tree...trial 1
+finished bootstrappings NAND tree
+time per bootNAND gate (microsecs)... 609128
+starting bootstrapping NAND tree...trial 2
+finished bootstrappings NAND tree
+time per bootNAND gate (microsecs)... 607148
+starting bootstrapping NAND tree...trial 3
+finished bootstrappings NAND tree
+time per bootNAND gate (microsecs)... 600619
+starting bootstrapping NAND tree...trial 4
+finished bootstrappings NAND tree
+time per bootNAND gate (microsecs)... 603740
+starting bootstrapping NAND tree...trial 5
+finished bootstrappings NAND tree
+time per bootNAND gate (microsecs)... 597664
+starting bootstrapping NAND tree...trial 6
+finished bootstrappings NAND tree
+time per bootNAND gate (microsecs)... 597394
+starting bootstrapping NAND tree...trial 7
+finished bootstrappings NAND tree
+time per bootNAND gate (microsecs)... 597521
+starting bootstrapping NAND tree...trial 8
+finished bootstrappings NAND tree
+time per bootNAND gate (microsecs)... 597176
+starting bootstrapping NAND tree...trial 9
+finished bootstrappings NAND tree
+time per bootNAND gate (microsecs)... 597724
+<end of output>
+Test time = 386.41 sec
+----------------------------------------------------------
+Test Passed.
+"test-gate-bootstrapping-nayuki-portable" end time: Nov 15 22:00 IST
+"test-gate-bootstrapping-nayuki-portable" time elapsed: 00:06:26
+----------------------------------------------------------
+

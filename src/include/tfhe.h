@@ -21,6 +21,8 @@
 
 #include "lwebootstrappingkey.h"
 
+#include "nussbaumer.h"
+
 #include "tfhe_gate_bootstrapping_functions.h"
 
 #include "tfhe_io.h"

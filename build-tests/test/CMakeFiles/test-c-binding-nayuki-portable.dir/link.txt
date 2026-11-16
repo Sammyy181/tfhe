@@ -1,0 +1,1 @@
+/usr/bin/cc  -std=c99 -g3 -march=native -O3 -DNDEBUG -funroll-loops -Wall -Werror -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names "CMakeFiles/test-c-binding-nayuki-portable.dir/test-c-binding.c.o" -o test-c-binding-nayuki-portable  -Wl,-rpath,/Users/samarthg/Desktop/Sem_7/BTP/tfhe/build-tests/libtfhe ../libtfhe/libtfhe-nayuki-portable.dylib

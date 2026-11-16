@@ -19,6 +19,7 @@ TGSW fft operations
 #include "polynomials_arithmetic.h"
 #include "lagrangehalfc_arithmetic.h"
 #include "lwebootstrappingkey.h"
+#include "nussbaumer.h"
 
 using namespace std;
 #else
@@ -112,6 +113,82 @@ EXPORT void tGswFFTExternMulToTLwe(TLweSample *accum, const TGswSampleFFT *gsw, 
     delete_LagrangeHalfCPolynomial_array(kpl, decaFFT);
     delete_IntPolynomial_array(kpl, deca);
 }
+
+
+#ifndef TFHE_TEST_ENVIRONMENT
+/* ***************************************************
+TGSW Nussbaumer operations
+(same roles as the FFT functions above, with the Nussbaumer(16, 8) transform
+and Winograd-Schoolbook products instead of the FFT; see nussbaumer.h)
+*************************************************** */
+
+EXPORT TGswSampleNussbaumer *new_TGswSampleNussbaumer_array(int32_t nbelts, const TGswParams *params) {
+    const int32_t k = params->tlwe_params->k;
+    const int32_t l = params->l;
+    assert(params->tlwe_params->N == NUSS_N);
+    TGswSampleNussbaumer *obj = new TGswSampleNussbaumer[nbelts];
+    for (int32_t i = 0; i < nbelts; i++) {
+        obj[i].data = new NussWord[params->kpl * (k + 1) * NUSS_SIZE];
+        obj[i].k = k;
+        obj[i].l = l;
+    }
+    return obj;
+}
+
+EXPORT TGswSampleNussbaumer *new_TGswSampleNussbaumer(const TGswParams *params) {
+    return new_TGswSampleNussbaumer_array(1, params);
+}
+
+EXPORT void delete_TGswSampleNussbaumer_array(int32_t nbelts, TGswSampleNussbaumer *obj) {
+    for (int32_t i = 0; i < nbelts; i++) delete[] obj[i].data;
+    delete[] obj;
+}
+
+EXPORT void delete_TGswSampleNussbaumer(TGswSampleNussbaumer *obj) {
+    delete_TGswSampleNussbaumer_array(1, obj);
+}
+
+// For all the kpl TLWE samples composing the TGSW sample
+// It computes the Nussbaumer transform of the coefficients of the TLWE sample
+EXPORT void tGswToNussbaumerConvert(TGswSampleNussbaumer *result, const TGswSample *source, const TGswParams *params) {
+    const int32_t k = params->tlwe_params->k;
+    const int32_t kpl = params->kpl;
+
+    for (int32_t p = 0; p < kpl; p++)
+        for (int32_t j = 0; j <= k; j++)
+            nussbaumerForward(result->data + (p * (k + 1) + j) * NUSS_SIZE, source->all_sample[p].a[j].coefsT);
+}
+
+// External product (*): accum = gsw (*) accum
+// Lazy interpolation: the kpl products of each output polynomial are summed
+// in the Nussbaumer domain, and the inverse transform is called only once
+// per output polynomial, at the very end.
+EXPORT void tGswNussbaumerExternMulToTLwe(TLweSample *accum, const TGswSampleNussbaumer *gsw, const TGswParams *params) {
+    const TLweParams *tlwe_params = params->tlwe_params;
+    const int32_t k = tlwe_params->k;
+    const int32_t l = params->l;
+    const int32_t kpl = params->kpl;
+    const int32_t N = tlwe_params->N;
+    //TODO attention, improve these new/delete...
+    IntPolynomial *deca = new_IntPolynomial_array(kpl, N); //decomposed accumulator
+    NussWord *tmpa = new NussWord[(k + 1) * NUSS_SIZE](); //k+1 accumulators in the Nussbaumer domain, set to 0
+
+    for (int32_t i = 0; i <= k; i++)
+        tGswTorus32PolynomialDecompH(deca + i * l, accum->a + i, params);
+
+    // tmpa += deca[p] * (row p of gsw): forward transform of deca[p] and
+    // Winograd-Schoolbook products, but no inverse transform
+    for (int32_t p = 0; p < kpl; p++)
+        torusPolynomialAddMulRNussbaumer(tmpa, deca + p, gsw->data + p * (k + 1) * NUSS_SIZE, k + 1);
+
+    // the only inverse transforms of the whole external product
+    for (int32_t j = 0; j <= k; j++)
+        nussbaumerInverse(accum->a[j].coefsT, tmpa + j * NUSS_SIZE);
+
+    delete[] tmpa;
+    delete_IntPolynomial_array(kpl, deca);
+}
+#endif //TFHE_TEST_ENVIRONMENT
 
 // result = (X^ai -1)*bki  
 /*

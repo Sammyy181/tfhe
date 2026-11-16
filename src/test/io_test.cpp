@@ -119,7 +119,7 @@ namespace {
     const LweBootstrappingKey* bk1 = new_random_bk_key(11,1,lweparams120, tgswparams128_2);
     const set<const LweBootstrappingKey*> allbk = { bk1 };
 
-    const TFheGateBootstrappingSecretKeySet* gbsk1 = new TFheGateBootstrappingSecretKeySet(gbp1, bk1, 0, lwekey120, tgswkey128_2 );
+    const TFheGateBootstrappingSecretKeySet* gbsk1 = new TFheGateBootstrappingSecretKeySet(gbp1, bk1, 0, 0, lwekey120, tgswkey128_2 );
     const set<const TFheGateBootstrappingSecretKeySet*> allgbsk = { gbsk1 };
 
     const set<const TFheGateBootstrappingCloudKeySet*> allgbck = { &gbsk1->cloud };

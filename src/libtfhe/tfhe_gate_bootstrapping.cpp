@@ -104,7 +104,10 @@ new_random_gate_bootstrapping_secret_keyset(const TFheGateBootstrappingParameter
                                                       params->tgsw_params);
     tfhe_createLweBootstrappingKey(bk, lwe_key, tgsw_key);
     LweBootstrappingKeyFFT *bkFFT = new_LweBootstrappingKeyFFT(bk);
-    return new TFheGateBootstrappingSecretKeySet(params, bk, bkFFT, lwe_key, tgsw_key);
+    // the Nussbaumer transform is only implemented for N = NUSS_N
+    LweBootstrappingKeyNussbaumer *bkNuss =
+            (params->tgsw_params->tlwe_params->N == NUSS_N) ? new_LweBootstrappingKeyNussbaumer(bk) : 0;
+    return new TFheGateBootstrappingSecretKeySet(params, bk, bkFFT, bkNuss, lwe_key, tgsw_key);
 }
 
 /** deletes a gate bootstrapping secret key */
@@ -113,6 +116,8 @@ EXPORT void delete_gate_bootstrapping_secret_keyset(TFheGateBootstrappingSecretK
     TGswKey *tgsw_key = (TGswKey *) keyset->tgsw_key;
     LweBootstrappingKey *bk = (LweBootstrappingKey *) keyset->cloud.bk;
     LweBootstrappingKeyFFT *bkFFT = (LweBootstrappingKeyFFT *) keyset->cloud.bkFFT;
+    LweBootstrappingKeyNussbaumer *bkNuss = (LweBootstrappingKeyNussbaumer *) keyset->cloud.bkNuss;
+    if (bkNuss) delete_LweBootstrappingKeyNussbaumer(bkNuss);
     if (bkFFT) delete_LweBootstrappingKeyFFT(bkFFT);
     if (bk) delete_LweBootstrappingKey(bk);
     delete_TGswKey(tgsw_key);
@@ -124,6 +129,8 @@ EXPORT void delete_gate_bootstrapping_secret_keyset(TFheGateBootstrappingSecretK
 EXPORT void delete_gate_bootstrapping_cloud_keyset(TFheGateBootstrappingCloudKeySet *keyset) {
     LweBootstrappingKey *bk = (LweBootstrappingKey *) keyset->bk;
     LweBootstrappingKeyFFT *bkFFT = (LweBootstrappingKeyFFT *) keyset->bkFFT;
+    LweBootstrappingKeyNussbaumer *bkNuss = (LweBootstrappingKeyNussbaumer *) keyset->bkNuss;
+    if (bkNuss) delete_LweBootstrappingKeyNussbaumer(bkNuss);
     if (bkFFT) delete_LweBootstrappingKeyFFT(bkFFT);
     if (bk) delete_LweBootstrappingKey(bk);
     delete keyset;

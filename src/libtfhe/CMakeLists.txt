@@ -13,6 +13,7 @@ set(SRCS
     lweparams.cpp
     lwesamples.cpp
     multiplication.cpp
+    nussbaumer.cpp
     numeric-functions.cpp
     polynomials.cpp
     tgsw.cpp
@@ -26,6 +27,7 @@ set(SRCS
     lwe-keyswitch-functions.cpp
     lwe-bootstrapping-functions.cpp
     lwe-bootstrapping-functions-fft.cpp
+    lwe-bootstrapping-functions-nussbaumer.cpp
     tfhe_io.cpp
     tfhe_generic_streams.cpp
     tfhe_garbage_collector.cpp

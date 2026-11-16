@@ -1,0 +1,14 @@
+{
+	"InstallScripts" : 
+	[
+		"/Users/samarthg/Desktop/Sem_7/BTP/tfhe/build-tests/cmake_install.cmake",
+		"/Users/samarthg/Desktop/Sem_7/BTP/tfhe/build-tests/libtfhe/cmake_install.cmake",
+		"/Users/samarthg/Desktop/Sem_7/BTP/tfhe/build-tests/libtfhe/fft_processors/cmake_install.cmake",
+		"/Users/samarthg/Desktop/Sem_7/BTP/tfhe/build-tests/libtfhe/fft_processors/nayuki/cmake_install.cmake",
+		"/Users/samarthg/Desktop/Sem_7/BTP/tfhe/build-tests/test/cmake_install.cmake",
+		"/Users/samarthg/Desktop/Sem_7/BTP/tfhe/build-tests/test/googletest/cmake_install.cmake",
+		"/Users/samarthg/Desktop/Sem_7/BTP/tfhe/build-tests/test/googletest/googlemock/cmake_install.cmake",
+		"/Users/samarthg/Desktop/Sem_7/BTP/tfhe/build-tests/test/googletest/googlemock/gtest/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

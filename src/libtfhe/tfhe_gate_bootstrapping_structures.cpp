@@ -15,18 +15,20 @@ TFheGateBootstrappingParameterSet::TFheGateBootstrappingParameterSet(const int32
 TFheGateBootstrappingCloudKeySet::TFheGateBootstrappingCloudKeySet(
         const TFheGateBootstrappingParameterSet* const params, 
         const LweBootstrappingKey* const bk,
-        const LweBootstrappingKeyFFT* const bkFFT):
-    params(params),bk(bk),bkFFT(bkFFT)
+        const LweBootstrappingKeyFFT* const bkFFT,
+        const LweBootstrappingKeyNussbaumer* const bkNuss):
+    params(params),bk(bk),bkFFT(bkFFT),bkNuss(bkNuss)
 {}
 
 TFheGateBootstrappingSecretKeySet::TFheGateBootstrappingSecretKeySet(
         const TFheGateBootstrappingParameterSet* const params, 
         const LweBootstrappingKey* const bk,
         const LweBootstrappingKeyFFT* const bkFFT,
+        const LweBootstrappingKeyNussbaumer* const bkNuss,
         const LweKey* lwe_key,
         const TGswKey* tgsw_key):
     params(params),
     lwe_key(lwe_key),
     tgsw_key(tgsw_key),
-    cloud(params,bk,bkFFT) 
+    cloud(params,bk,bkFFT,bkNuss) 
 {}

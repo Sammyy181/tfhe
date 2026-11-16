@@ -21,7 +21,7 @@ namespace {
         //LweBootstrappingKeyFFT* bkFFT = 0x0; // new_LweBootstrappingKeyFFT(bk);
         LweKeySwitchKey *ks = (LweKeySwitchKey *) new FakeLweKeySwitchKey(1024, 15, 1);
         LweBootstrappingKeyFFT *bkFFT = new LweBootstrappingKeyFFT(0, 0, 0, 0, 0, ks);
-        return new TFheGateBootstrappingSecretKeySet(params, bk, bkFFT, lwe_key, tgsw_key);
+        return new TFheGateBootstrappingSecretKeySet(params, bk, bkFFT, 0, lwe_key, tgsw_key);
     }
 
 

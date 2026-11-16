@@ -12,6 +12,7 @@
 #include "tgsw_functions.h"
 #include "polynomials_arithmetic.h"
 #include "tfhe_gate_bootstrapping_structures.h"
+#include "nussbaumer.h"
 
 using namespace std;
 #else
@@ -1093,7 +1094,10 @@ read_new_tfheGateBootstrappingCloudKeySet(const Istream &F, const TFheGateBootst
     }
     LweBootstrappingKey *bk = read_new_lweBootstrappingKey(F, params->in_out_params, params->tgsw_params);
     LweBootstrappingKeyFFT *bkFFT = new_LweBootstrappingKeyFFT(bk);
-    return new TFheGateBootstrappingCloudKeySet(params, bk, bkFFT);
+    // the Nussbaumer transform is only implemented for N = NUSS_N
+    LweBootstrappingKeyNussbaumer *bkNuss =
+            (params->tgsw_params->tlwe_params->N == NUSS_N) ? new_LweBootstrappingKeyNussbaumer(bk) : 0;
+    return new TFheGateBootstrappingCloudKeySet(params, bk, bkFFT, bkNuss);
 }
 
 void write_tfheGateBootstrappingCloudKeySet(const Ostream &F, const TFheGateBootstrappingCloudKeySet *key,
@@ -1154,7 +1158,10 @@ read_new_tfheGateBootstrappingSecretKeySet(const Istream &F, const TFheGateBoots
     LweKey *lwe_key = read_new_lweKey(F, params->in_out_params);
     TGswKey *tgsw_key = read_new_tGswKey(F, params->tgsw_params);
     LweBootstrappingKeyFFT *bkFFT = new_LweBootstrappingKeyFFT(bk);
-    return new TFheGateBootstrappingSecretKeySet(params, bk, bkFFT, lwe_key, tgsw_key);
+    // the Nussbaumer transform is only implemented for N = NUSS_N
+    LweBootstrappingKeyNussbaumer *bkNuss =
+            (params->tgsw_params->tlwe_params->N == NUSS_N) ? new_LweBootstrappingKeyNussbaumer(bk) : 0;
+    return new TFheGateBootstrappingSecretKeySet(params, bk, bkFFT, bkNuss, lwe_key, tgsw_key);
 }
 
 void write_tfheGateBootstrappingSecretKeySet(const Ostream &F, const TFheGateBootstrappingSecretKeySet *key,
